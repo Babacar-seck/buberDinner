@@ -61,9 +61,6 @@ public class AuthentificationController : ControllerBase
     [HttpGet]
     public IActionResult GetAllUsers()
     {
-
         return Ok(_authentificationService.GetAllUsers());
     }
-
-
 }
