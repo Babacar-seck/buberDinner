@@ -4,5 +4,5 @@ POST  {{host}}/auth/login
 Content-Type: application/json
 {
     "email" : "babacarseckdevweb@gmail.com",
-    "password" : "test2022"
+    "password" : "2022"
 }

@@ -19,9 +19,9 @@ public class AuthentificationController : ControllerBase
     public IActionResult Register(RegisterRequest request)
     {
         var auhtResult = _authentificationService.Register(
-            request.FirstName, 
-            request.LastName, 
-            request.Email, 
+            request.FirstName,
+            request.LastName,
+            request.Email,
             request.Password
         );
 
@@ -33,10 +33,8 @@ public class AuthentificationController : ControllerBase
                     auhtResult.Token
                 );
 
-
         return Ok(response);
     }
-
 
     [HttpPost("login")]
     public IActionResult Login(LoginRequest request)
@@ -56,7 +54,6 @@ public class AuthentificationController : ControllerBase
 
         return Ok(response);
     }
-
 
     [HttpGet]
     public IActionResult GetAllUsers()
