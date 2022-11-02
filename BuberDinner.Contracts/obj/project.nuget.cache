@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oRddx0hrzDL7eJfMTD/vV14Eer3+LR3GEvrPFcg1BHDN0g+7JWzCiwUndZdIXr5C9JAjRqrezAasmJWHK0Qwlg==",
+  "dgSpecHash": "CQtqTcsKrXgLn44YC2bpg26PUDc+dVoyJR6qF7vWjJWOiu/hhIPtOC96ZYyBjF+rOdS9ySsfLT/CbxuDyw8E2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\babac\\Documents\\OwnGitProjects\\CleanArchitectureDDD\\BuberDinner\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj",
+  "projectFilePath": "c:\\Users\\babac\\Documents\\OwnGitProjects\\CleanArchitectureDDD\\BuberDinner\\BuberDinner.Contracts\\BuberDinner.Contracts.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

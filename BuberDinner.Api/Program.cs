@@ -3,6 +3,7 @@ using BuberDinner.Api.Filters;
 using BuberDinner.Api.Middleware;
 using BuberDinner.Application;
 using BuberDinner.Infrastructure;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,8 +19,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-builder.Services.AddSingleton<ProblemDetailsFactory, BuberDinnerProblemDetailsFactory>();
+// Approche avec un problemDetailsFactory overiddé BuberDinnerProblemDetailsFactory
+//builder.Services.AddSingleton<ProblemDetailsFactory, BuberDinnerProblemDetailsFactory>();
 
 // Configure the HTTP request pipeline.
 // if (app.Environment.IsDevelopment())
@@ -36,6 +37,14 @@ var app = builder.Build();
     // Troisieme Approche 
     //Adds a middleware to the pipeline that will catch exceptions, log them, reset the request path, and re-execute the request. The request will not be re-executed if the response has already started.
     app.UseExceptionHandler("/error");
+
+    //L'approche pour un Api Simple 
+    // Ressemble presque à l'approche avec le ProblemDetailsFactory sauf qu'on l'utilise point 
+    //Parce qu'il ny pas de dependecy Injection 
+    app.Map("/error", (HttpContext httpContext) => {
+        Exception? exception = httpContext.Features.Get<IExceptionHandlerFeature>()?.Error;
+        return Results.Problem();
+    });
     app.UseHttpsRedirection();
     app.UseAuthorization();
     app.MapControllers();
