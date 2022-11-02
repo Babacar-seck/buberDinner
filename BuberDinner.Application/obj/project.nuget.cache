@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "OYOhBP2cT/Umk+EF9d1GSLQkxq48HrZ7IHuIDQRd9E62V+N1JOfBXWdl7iOXk8dxhzUHmxKNgpRvkDw1ylHiEw==",
+  "dgSpecHash": "1j1MKumDqmemCxz7dm/uqc2NxPlA0pDcO9aktwZ1xIQnRdr+asXYcGxap2yWHH/bdXYqfEuWEaXOP+s3USRE3A==",
   "success": true,
-  "projectFilePath": "c:\\Users\\babac\\Documents\\OwnGitProjects\\CleanArchitectureDDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj",
+  "projectFilePath": "C:\\Users\\babac\\Documents\\OwnGitProjects\\CleanArchitectureDDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\babac\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\babac\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\babac\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
   ],
   "logs": []
