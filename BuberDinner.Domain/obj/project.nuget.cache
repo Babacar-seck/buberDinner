@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zcmulZHW80GurQ7lWpTvSvTagbZtAZa51zRLTlg6TOwyeU0W78+Z8ova+HPpORNWaLFHutLLoLjL5O0qt8J1+Q==",
+  "dgSpecHash": "pAw/L1/gkGj2NQo0J7lkFUYi3GbcJUeVpy1EBH0DlPB+lmFdjze+dRskC1tt7Ldfj2+wgwB/pOsqSlbRlfe1uw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\babac\\Documents\\OwnGitProjects\\CleanArchitectureDDD\\BuberDinner\\BuberDinner.Domain\\BuberDinner.Domain.csproj",
+  "projectFilePath": "C:\\Users\\babac\\Documents\\OwnGitProjects\\CleanArchitectureDDD\\BuberDinner\\BuberDinner.Domain\\BuberDinner.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\babac\\.nuget\\packages\\erroror\\1.0.1\\erroror.1.0.1.nupkg.sha512"
   ],

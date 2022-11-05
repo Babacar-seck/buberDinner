@@ -23,13 +23,13 @@ public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<Authentific
         //1. Validate the user exists
         if (_userRepository.GetUserByEmail(query.Email) is not User user)
         {
-            return Errors.Authentification.InvalidCredential;
+            return Errors.Authentification.InvalidCredentials;
         }
 
         //2.Valide the password is correct 
         if (user.Password != query.Password)
         {
-            return Errors.Authentification.InvalidCredential;
+            return Errors.Authentification.InvalidCredentials;
         }
 
         //3. Create JWT token

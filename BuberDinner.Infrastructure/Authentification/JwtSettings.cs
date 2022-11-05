@@ -1,8 +1,7 @@
 namespace BuberDinner.Infrastructure.Authentification;
 
-public class JwtSettings 
+public class JwtSettings
 {
-
     public const string SectionName = "JwtSettings";
     public string? Secret { get; init; }
     public int ExpiryMinutes { get; init; }
