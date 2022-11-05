@@ -1,12 +1,14 @@
 using System.Diagnostics;
+using BuberDinner.Api.Common.Http;
+using ErrorOr;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
 
-namespace BuberDinner.Api.Errors;
+namespace BuberDinner.Api.Common.Errors;
 
-public  class BuberDinnerProblemDetailsFactory : ProblemDetailsFactory
+public class BuberDinnerProblemDetailsFactory : ProblemDetailsFactory
 {
     private readonly ApiBehaviorOptions _options;
     //private readonly Action<ProblemDetailsContext>? _configure;
@@ -91,8 +93,12 @@ public  class BuberDinnerProblemDetailsFactory : ProblemDetailsFactory
         {
             problemDetails.Extensions["traceId"] = traceId;
         }
-        // Cette approche me permet de resigner le problemDetailsFactory avec un message propre
-        problemDetails.Extensions.Add("customProperty", "customValue");
+        var errors = httpContext?.Items["errors"] as List<Error>;
+
+        if (errors is not null)
+        {
+            problemDetails.Extensions.Add(HttpContextItemKey.Errors , errors.Select(e => e.Code));
+        }
         //_configure?.Invoke(new() { HttpContext = httpContext!, ProblemDetails = problemDetails });
     }
 }

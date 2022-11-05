@@ -1,6 +1,4 @@
-using BuberDinner.Api.Errors;
-using BuberDinner.Api.Filters;
-using BuberDinner.Api.Middleware;
+using BuberDinner.Api.Common.Errors;
 using BuberDinner.Application;
 using BuberDinner.Infrastructure;
 using Microsoft.AspNetCore.Diagnostics;
@@ -20,7 +18,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // Approche avec un problemDetailsFactory overiddé BuberDinnerProblemDetailsFactory
-//builder.Services.AddSingleton<ProblemDetailsFactory, BuberDinnerProblemDetailsFactory>();
+builder.Services.AddSingleton<ProblemDetailsFactory, BuberDinnerProblemDetailsFactory>();
 
 // Configure the HTTP request pipeline.
 // if (app.Environment.IsDevelopment())
@@ -41,10 +39,10 @@ var app = builder.Build();
     //L'approche pour un Api Simple 
     // Ressemble presque à l'approche avec le ProblemDetailsFactory sauf qu'on l'utilise point 
     //Parce qu'il ny pas de dependecy Injection 
-    app.Map("/error", (HttpContext httpContext) => {
-        Exception? exception = httpContext.Features.Get<IExceptionHandlerFeature>()?.Error;
-        return Results.Problem();
-    });
+    // app.Map("/error", (HttpContext httpContext) => {
+    //     Exception? exception = httpContext.Features.Get<IExceptionHandlerFeature>()?.Error;
+    //     return Results.Problem();
+    // });
     app.UseHttpsRedirection();
     app.UseAuthorization();
     app.MapControllers();
