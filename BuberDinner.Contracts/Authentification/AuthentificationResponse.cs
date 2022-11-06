@@ -1,7 +1,7 @@
 namespace BuberDinner.Contracts.Authentification;
 
 public record AuthentificationResponse(
-    Guid Guid,
+    Guid Id,
     string FirstName,
     string LastName,
     string Email,

@@ -36,6 +36,11 @@
                 "${workspaceFolder}/BuberDinner.Api/BuberDinner.Api.csproj"
             ],
             "problemMatcher": "$msCompile"
-        }
+        },
+		{
+			"label": "make this work",
+			"dependsOn": ["build", "test"],
+			"problemMatcher": "$msCompile"
+		}
     ]
 }
