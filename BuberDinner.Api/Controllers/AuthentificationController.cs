@@ -1,16 +1,16 @@
+using ErrorOr;
+using MediatR;
+using MapsterMapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+using BuberDinner.Contracts.Authentification;
 using BuberDinner.Application.Authentification.Commands.Register;
 using BuberDinner.Application.Authentification.Commom;
 using BuberDinner.Application.Authentification.Queries.Login;
-using BuberDinner.Contracts.Authentification;
-using ErrorOr;
-using MapsterMapper;
-using MediatR;
-
-using Microsoft.AspNetCore.Mvc;
-
 namespace BuberDinner.Api.Controllers;
 
 [Route("auth")]
+[AllowAnonymous]
 public class AuthentificationController : ApiController
 {
     private readonly ISender _mediator;
