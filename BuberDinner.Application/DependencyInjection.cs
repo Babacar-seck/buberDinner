@@ -21,8 +21,7 @@ public static class DependencyInjection
         // services.AddScoped<
         //     IPipelineBehavior<RegisterCommand, ErrorOr<AuthentificationResult>>,
         //     ValidationBehavior>();
-        services.AddScoped(
-            typeof(IPipelineBehavior<,>),typeof(ValidationBehavior<,>));
+        services.AddScoped(typeof(IPipelineBehavior<,>),typeof(ValidationBehavior<,>));
         // FLUENVALIDATOR Implement
         //services.AddScoped<IValidator<RegisterCommand>, RegisterCommandValidator>();
 

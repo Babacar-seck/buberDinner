@@ -45,15 +45,6 @@ public class AuthentificationController : ApiController
          return authResult.Match(
             authResult => Ok(_mapper.Map<AuthentificationResponse>(authResult)),
             errors => Problem(errors));
-
-        // var response = new AuthentificationResponse(
-        //             auhtResult.User.Id,
-        //             auhtResult.User.FirstName,
-        //             auhtResult.User.LastName,
-        //             auhtResult.User.Email,
-        //             auhtResult.Token
-        //         );
-        // return Ok(response);
     }
 
     [HttpPost("login")]
@@ -66,6 +57,7 @@ public class AuthentificationController : ApiController
          return authResult.Match(
             authResult => Ok(_mapper.Map<AuthentificationResponse>(authResult)),
             errors => Problem(errors));
+    //errors  = la liste d'errors est présente dans le controller apiController
     }
 
     // private static AuthentificationResponse MapAuthResult(AuthentificationResult authResult)
