@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m87OMJLJwJX/LjXdXcvS6PsNL0p+2ReYxLdvgFeV6VTsCDuczCzpK/TRU3GaNWqusiByJ7KqkEe93cUw4pXxlg==",
+  "dgSpecHash": "p14AkCQs+GKYpQqoGmD4GGs8+3lU2quy54O9RYPt0PAeqJARTAP2RtfgAHQADQFzgy3RK3CjHckf5Gi7Hmslzg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\babac\\Documents\\OwnGitProjects\\CleanArchitectureDDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj",
+  "projectFilePath": "c:\\Users\\babac\\Documents\\OwnGitProjects\\CleanArchitectureDDD\\BuberDinner\\BuberDinner.Application\\BuberDinner.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\babac\\.nuget\\packages\\erroror\\1.0.1\\erroror.1.0.1.nupkg.sha512",
     "C:\\Users\\babac\\.nuget\\packages\\fluentresults\\3.14.0\\fluentresults.3.14.0.nupkg.sha512",
