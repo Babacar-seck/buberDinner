@@ -9,6 +9,7 @@ class Menu
     void addDinner(Dinner dinner);
     void RemoveDinner(Dinner dinner);
     void UpdateSection(MenuSection section);
+    //TODO : Add remainning methods
 }
 ```
 
@@ -37,12 +38,16 @@ class Menu
     "updatedDateTime" : "2022-11-14T00:00.0000000Z",
     "hostId" : "00000-00000-00000-00000",
     "dinnerIds" : [
-        "00000-00000-00000-00000",
-        "00000-00000-00000-00000"
+        {
+            "value" : "00000-00000-00000-00000",
+            "value" : "00000-00000-00000-00000"
+        }
     ],
     "menuReviewId" : [
-        "00000-00000-00000-00000",
-        "00000-00000-00000-00000"
+        {
+            "value" : "00000-00000-00000-00000",
+            "value" : "00000-00000-00000-00000"
+        }
     ]
 
 ```
